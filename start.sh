@@ -4,5 +4,5 @@ python3 -m venv venv
 python3 -m pip install -r requirements.txt
 pip3 install --upgrade pytest Flask
 pytest hello_world_test.py
-export BUILD_ID=dontKillMe
-nohup python3 main.py &
+#export BUILD_ID=dontKillMe
+JENKINS_NODE_COOKIE=dontKillMe nohup python3 main.py > ~/flasklogs.log 2>&1 &
